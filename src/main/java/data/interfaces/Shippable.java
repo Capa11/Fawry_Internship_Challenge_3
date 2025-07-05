@@ -1,7 +1,7 @@
 package data.interfaces;
 
 public interface Shippable {
-    int getWeight();
-    void setWeight(int weight);
+    double getWeight();
+    void setWeight(double weight);
     String getName();
 }

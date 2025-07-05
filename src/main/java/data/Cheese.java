@@ -8,7 +8,7 @@ import java.util.Date;
 
 @EqualsAndHashCode(callSuper = true)
 public class Cheese extends Product implements Shippable , Expirable {
-    public Cheese(String name, int price, int quantity, int weight, Date expiryDate) {
+    public Cheese(String name, double price, int quantity, double weight, Date expiryDate) {
         super(name, price, quantity, expiryDate, weight);
     }
 
@@ -18,11 +18,11 @@ public class Cheese extends Product implements Shippable , Expirable {
     }
 
     @Override
-    public int getWeight() {
+    public double getWeight() {
         return weight;
     }
     @Override
-    public void setWeight(int weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
     @Override

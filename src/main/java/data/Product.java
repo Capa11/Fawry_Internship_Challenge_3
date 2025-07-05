@@ -10,25 +10,25 @@ public abstract class Product {
     protected String name;
     @Getter
     @Setter
-    protected int price;
+    protected double price;
     @Getter
     @Setter
     protected int quantity;
     protected Date expiryDate;
-    protected int weight;
+    protected double weight;
 
     protected boolean isExpirable=false;
     protected boolean isShippable=false;
 
     //notExpirable - notShippable
-    protected Product(String name, int price, int quantity) {
+    protected Product(String name, double price, int quantity) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
     }
 
     //Expirable
-    protected Product(String name, int price, int quantity, Date expiryDate) {
+    protected Product(String name, double price, int quantity, Date expiryDate) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
@@ -37,7 +37,7 @@ public abstract class Product {
     }
 
     //Shippable
-    public Product(String name, int price, int quantity, int weight) {
+    public Product(String name, double price, int quantity, double weight) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
@@ -45,7 +45,7 @@ public abstract class Product {
         isShippable=true;
     }
     //Shippable - Expirable
-    public Product(String name, int price, int quantity, Date expiryDate, int weight) {
+    public Product(String name, double price, int quantity, Date expiryDate, double weight) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;

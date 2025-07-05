@@ -3,17 +3,17 @@ package data;
 import data.interfaces.Shippable;
 
 public class TV extends Product implements Shippable {
-    public TV(String name, int price, int quantity, int weight) {
+    public TV(String name, double price, int quantity, double weight) {
         super(name, price, quantity, weight);
     }
 
     @Override
-    public int getWeight() {
+    public double getWeight() {
         return weight;
     }
 
     @Override
-    public void setWeight(int weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
 }

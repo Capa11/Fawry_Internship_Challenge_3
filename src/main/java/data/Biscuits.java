@@ -6,7 +6,7 @@ import data.interfaces.Shippable;
 import java.util.Date;
 public class Biscuits extends Product implements Shippable, Expirable {
 
-    public Biscuits(String name, int price, int quantity, Date expiryDate, int weight) {
+    public Biscuits(String name, double price, int quantity, Date expiryDate, double weight) {
         super(name, price, quantity, expiryDate, weight);
     }
 
@@ -21,12 +21,12 @@ public class Biscuits extends Product implements Shippable, Expirable {
     }
 
     @Override
-    public int getWeight() {
+    public double getWeight() {
         return weight;
     }
 
     @Override
-    public void setWeight(int weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
 }
